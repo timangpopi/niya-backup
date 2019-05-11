@@ -403,10 +403,6 @@ void __init setup_arch(char **cmdline_p)
 	init_thread_info.ttbr0 = virt_to_phys(empty_zero_page);
 #endif
 
-#ifdef CONFIG_PSTORE
-	pstore_ram_reserve_memory();
-#endif
-
 #ifdef CONFIG_VT
 #if defined(CONFIG_VGA_CONSOLE)
 	conswitchp = &vga_con;
